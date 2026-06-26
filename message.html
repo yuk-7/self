@@ -1,0 +1,148 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>在线留言</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: "微软雅黑",sans-serif;
+            background: #ffffff;
+        }
+        /* 导航栏 */
+        .nav{
+            display: flex;
+            background-color: #ff88a0;
+        }
+        .nav a{
+            flex: 1;
+            text-align: center;
+            padding: 12px 0;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .nav a:hover{
+            background-color: #ff6b8b;
+        }
+        /* 顶部横幅 */
+        .banner{
+            width: 100%;
+            height: 320px;
+            background-color: #f0f0f0;
+            background-image: url("kitty.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        /* 主体容器 */
+        .container{
+            width: 92%;
+            margin: 20px auto;
+        }
+        .title{
+            border-top: 2px solid #ff88a0;
+            padding-top: 10px;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+        /* 留言整体布局 左右分栏 */
+        .msg-wrap{
+            display: flex;
+            gap: 25px;
+            align-items: flex-start;
+        }
+        /* 左侧配图区域 */
+        .msg-pic{
+            width: 42%;
+            height: 320px;
+            background: #f8f8f8;
+        }
+        .msg-pic img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        /* 右侧留言表单 */
+        .msg-form{
+            width: 55%;
+        }
+        .msg-form p{
+            margin: 10px 0 4px;
+            font-size: 14px;
+        }
+        .msg-form input{
+            width: 100%;
+            padding: 6px;
+            border: 1px solid #ccc;
+        }
+        .submit-btn{
+            margin-top:12px;
+            text-align: right;
+        }
+        button{
+            padding: 4px 12px;
+            border: 1px solid #aaa;
+            background: #f4f4f4;
+            cursor: pointer;
+        }
+        /* 底部栏 */
+        .footer{
+            background-color: #ff88a0;
+            color: white;
+            text-align: center;
+            padding: 12px 0;
+            margin-top: 45px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航菜单 -->
+    <div class="nav">
+  <a href="self-introduction.html">个人信息</a>
+        <a href="photograph album.html">精美相册</a>
+        <a href="message.html">在线留言</a>
+    </div>
+
+    <!-- 顶部野餐横幅图 -->
+    <div class="banner"></div>
+
+<div class="container">
+    <h4 class="title">留言板</h4>
+    <div class="msg-wrap">
+        <!--左侧Hello Kitty配图位 DW直接替换图片 -->
+        <div class="msg-pic">
+            <img src="pic7.jpg" alt="留言板配图">
+        </div>
+        <!--右侧留言表单 -->
+        <div class="msg-form">
+            <form action="mailto:2512167531@qq.com?subject=网页新留言" enctype="text/plain" method="get">
+                <p>你的姓名:</p>
+                <input type="text" name="姓名">
+                <p>联系方式:</p>
+                <input type="text" name="联系">
+                <p>想和我说的话:</p>
+                <input type="text" name="留言">
+                <div class="submit-btn">
+                    <button type="submit">发送</button>
+                </div>
+            </form>
+        </div>
+    </div> <!-- 补上msg-wrap的闭合标签 -->
+</div>
+	</body>
+</html>

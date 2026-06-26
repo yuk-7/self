@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>精美相册</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: "微软雅黑",sans-serif;
+            background: #fff;
+        }
+        /* 导航栏 */
+        .nav{
+            display: flex;
+            background: #ff88a0;
+        }
+        .nav a{
+            flex: 1;
+            text-align: center;
+            padding: 12px 0;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .nav a:hover{
+            background: #ff6b8b;
+        }
+        /* 顶部横幅 */
+        .banner{
+            width: 100%;
+            height: 320px;
+            background-color: #f0f0f0;
+            background-image: url("kitty.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        /* 主体容器 */
+        .container{
+            width: 92%;
+            margin: 20px auto;
+        }
+        .title{
+            border-top: 2px solid #ff88a0;
+            padding-top: 10px;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+        /* 相册九宫格 */
+/* 六宫格/九宫格通用 9:16竖版布局 + 超大图兼容 */
+.album-box{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
+}
+.album-item{
+    width: 1080
+    height: 0;
+    padding-bottom: 177.78%; /* 9:16竖版比例 */
+    background: #f8f8f8;
+    border: 1px solid #eee;
+    position: relative;
+    overflow: hidden;
+}
+.album-item img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 100%;  /* 限制图片最大宽度 */
+    max-height: 100%; /* 限制图片最大高度 */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    image-rendering: auto; /* 降低渲染压力，超大图流畅显示 */
+}
+        /* 底部栏 */
+        .footer{
+            background: #ff88a0;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航菜单 -->
+    <div class="nav">
+      <a href="self-introduction.html">个人信息</a>
+        <a href="photograph album.html">精美相册</a>
+        <a href="message.html">在线留言</a>
+    </div>
+
+    <!-- 顶部野餐横幅图 -->
+    <div class="banner"></div>
+
+    <div class="container">
+        <h4 class="title">精美相册</h4>
+        <!-- 9宫格相册，每块都可以在DW设计视图替换图片 -->
+     
+<div class="album-box">
+	<div class="album-item"><img src="pic1.jpg" alt="相册图片1"></div>
+    <div class="album-item"><img src="pic2.jpg" alt="相册图片2"></div>
+    <div class="album-item"><img src="pic3.jpg" alt="相册图片3"></div>
+    <div class="album-item"><img src="pic4.jpg" alt="相册图片4"></div>
+    <div class="album-item"><img src="pic5.jpg" alt="相册图片5"></div>
+    <div class="album-item"><img src="pic6.jpg" alt="相册图片6"></div>
+</div>
+     
+    </div>
+</body>
+</html>

@@ -1,0 +1,210 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+</body>
+</html><!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>个人介绍网页</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: "微软雅黑",sans-serif;
+            background: #ffffff;
+        }
+        /* 顶部导航栏 */
+        .nav{
+            display: flex;
+            background-color: #ff88a0;
+        }
+        .nav a{
+            flex: 1;
+            text-align: center;
+            padding: 12px 0;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .nav a:hover{
+            background-color: #ff6b8b;
+        }
+
+        /* 【图片位置1：顶部横幅背景图】 无图时有灰色占位 */
+        .banner{
+            width: 100%;
+            height: 320px;
+            background-color: #f0f0f0;
+            background-image: url("kitty.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        /* 主体容器 */
+        .container{
+            width: 92%;
+            margin: 25px auto;
+        }
+
+        .info-box{
+            display: flex;
+            gap: 30px;
+            margin-bottom: 30px;
+            border-top: 2px solid #ff88a0;
+            padding-top: 18px;
+        }
+
+        /* 【图片位置2：左侧个人头像】 灰色占位框，DW可视化点击换图 */
+        .avatar{
+            width: 220px;
+            height: 260px;
+            border: 1px solid #dddddd;
+            background-color: #f8f8f8;
+        }
+        .avatar img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* 信息表格 */
+        .info-table{
+            flex: 1;
+        }
+        .info-table table{
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .info-table td{
+            border: 1px solid #ddd;
+            padding: 10px;
+            font-size: 14px;
+        }
+        .info-table td:first-child{
+            background-color: #fef0f3;
+            width: 120px;
+        }
+
+        /* 板块标题分割线 */
+        .title{
+            border-top: 2px solid #ff88a0;
+            margin: 28px 0 12px;
+            padding-top: 10px;
+            font-weight: bold;
+        }
+
+        .eval-text{
+            line-height: 1.75;
+            font-size: 14px;
+            color: #333333;
+        }
+        .hobby-list{
+            line-height: 2;
+            font-size: 14px;
+            padding-left: 8px;
+        }
+
+        /* 底部粉色栏 */
+        .footer{
+            background-color: #ff88a0;
+            color: white;
+            text-align: center;
+            padding: 12px 0;
+            margin-top: 45px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航菜单 -->
+    <div class="nav">
+        <a href="self-introduction.html">个人信息</a>
+        <a href="photograph album.html">精美相册</a>
+        <a href="message.html">在线留言</a>
+    </div>
+
+    <!-- ==========================
+        图片位置1：顶部全景背景图
+        DW操作：CSS样式面板修改banner的背景图片
+        图片命名：banner.jpg 和网页放同一个文件夹
+    =========================== -->
+    <div class="banner"></div>
+    <div class="container">
+        <h4>个人信息</h4>
+        <div class="info-box">
+            <!-- ==========================
+                图片位置2：左侧个人头像照片
+                DW操作：切换设计视图，直接点击空白框，下方属性面板替换图片
+                图片命名：head.jpg
+            =========================== -->
+            <div class="avatar">
+                <img src="head.jpg" alt="个人头像">
+            </div>
+
+            <!-- 个人信息表格 -->
+            <div class="info-table">
+                <table>
+                    <tr>
+                        <td>姓名</td>
+                        <td>刘钰琦&nbsp;</td>
+                        <td>性别</td>
+                        <td>女</td>
+                    </tr>
+                    <tr>
+                        <td>年龄</td>
+                        <td>20&nbsp;</td>
+                        <td>星座</td>
+                        <td>双鱼座&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>民族</td>
+                        <td>汉族</td>
+                        <td>生日&nbsp;</td>
+                        <td>2006.3.7&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>电话</td>
+                        <td>13809630279&nbsp;</td>
+                        <td>邮箱</td>
+                        <td>2512167531@qq.com&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>mbti&nbsp;</td>
+                        <td>&nbsp;infp</td>
+                        <td>家乡住址</td>
+                        <td>广东&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>座右铭</td>
+                        <td colspan="3">一切发生皆有利于我&nbsp;</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- 自我评价区域 -->
+        <h4 class="title">自我评价</h4>
+        <p class="eval-text">
+       我是典型INFP双鱼座，内心敏感细腻，习惯向内感知情绪，是偏爱安静与独处的人。比起喧闹的社交，我更享受沉浸在文字、影像和自己的思绪里，总能敏锐捕捉旁人忽略的温柔细节，共情力很强，容易体谅他人的难处。平日里我心思细腻，对待学习认真踏实，尤其喜欢钻研影视、文字相关内容，会愿意静下心梳理镜头语言、撰写分析文字，对待自己在意的事十分执着。性格温和慢热，不擅长主动争抢，遇事习惯先换位思考，偶尔容易内耗，会反复纠结内心想法。我向往真诚纯粹的相处，偏爱温柔松弛的氛围，保有浪漫柔软的想象力。待人真诚友善，愿意耐心倾听他人，虽然不善表达热烈情绪，但会用细腻的方式默默在意身边人，始终守着内心独有的柔软与理想。
+
+        </p>
+
+        <!-- 个人爱好区域 -->
+        <h4 class="title">个人爱好</h4>
+        <div class="hobby-list">
+            <p>听音乐、看电影、追星、跳舞、喜欢看mbti、塔罗星座</p>
+         
+        </div>
+    </div>
+</body>
+</html>
